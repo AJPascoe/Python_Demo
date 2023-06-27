@@ -15,4 +15,5 @@ elif x >= 50  and x <=60:
     print("Pass")
 elif x <= 49 and x >= 1:
     print("Fail")
-elif 
+elif x < 1 or x > 100:
+    print("Error")
