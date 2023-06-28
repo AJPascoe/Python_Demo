@@ -31,7 +31,7 @@ x = 9
 # Note: You must start with the highest age value first.
 # 2.	Save and run your code using different values for age.
 
-x = 15
+x = 1
 
 if x >= 18:
     print("You are in category A")
