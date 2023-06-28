@@ -13,9 +13,9 @@
 
 
 i = int(input("How much investment: "))
-y = 0
+y = 0 # years
 t = int(input("Enter Target Value: "))
-r = 1.1
+r = 1.1 # rate of investment
 
 while i < t:
     i *= r

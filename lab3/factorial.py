@@ -11,8 +11,8 @@
 
 
 n = int(input("Factorial Number: "))
-x = 1
+x = 1 # x is our factorial
 while n > 1:
     x = n * x
     n -= 1
-    print(x) 
+print(x) 

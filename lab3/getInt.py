@@ -11,18 +11,21 @@
 # Note: None is a valid keyword in Python which stands for Null.
 
 min = 1
-max = 10
-
-i = 0
+max = 100
+i = 0  # user input counter
 
 while i < 3:
-    u = int(input("Pick a number: "))
+    u = int(input(f"Pick a number between {min} and {max}: "))
     print(u)
     i += 1
     if u < min or u > max:
-        print("Try again!: ")
-    elif u == 5:
+        print("Invalid number")
         break
-    elif i == 3:
-        print(None)
+    elif u == 5:  # u is the correct value 
+        print(u,"is correct")
+        break
+    else:
+        print("Try again!: ")
+if i == 3: # if user reaches 3 attepts
+    print(None)
     
