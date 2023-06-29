@@ -10,4 +10,4 @@ def getIncomeTax(salary):
         return ((salary - 150000) * 0.45) + 50730 
 salary = 15850	 
 ta = getIncomeTax(salary)
-print(f"Tax amount for salary £{salary} is £{ta}")
+print(f"Tax to be charged is £{ta}")
