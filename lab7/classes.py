@@ -120,6 +120,11 @@ class BankAccount:
     def add(self, deposit):
         self.balance += deposit
         print(f"Bank Account Number {self.pinNumber} has £{self.balance}")
+        user = input("Would you like a reciept? ")
+        if user == "y":
+            print(f"{self.balance}{self.balance}{self.balance}{self.balance}")
+        else:
+            pass
     
     def minus(self, withdraw):
         if withdraw > self.balance:
@@ -127,6 +132,11 @@ class BankAccount:
         else:
             self.balance -= withdraw
             print(f"Bank Account Number {self.pinNumber} has £{self.balance}")
+            user = input("Would you like a reciept? ")
+            if user == "y":
+                print(f"{self.balance}{self.balance}{self.balance}{self.balance}")
+            else:
+                pass
 
 x = int(input("Enter Pin Number: "))
 deposit1 = BankAccount(x)
