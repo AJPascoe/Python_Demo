@@ -12,7 +12,7 @@
 # Simple IF statements work fine but not in a chain of IF statements such as these.
 
 
-x = 9
+# x = 9
 
 # if x >= 18:
 #     print("You are in category A")
@@ -31,7 +31,7 @@ x = 9
 # Note: You must start with the highest age value first.
 # 2.	Save and run your code using different values for age.
 
-x = 1
+x = int(input("Please enter your age: "))
 
 if x >= 18:
     print("You are in category A")

@@ -25,35 +25,105 @@
 
 
 
-class Animal:
-    def __init__(self, age, name):
-        self.age = age
-        self.name = name
-    def eat(self):
-        print(f"{self.name} is eating")
-class Dog(Animal) :
-    def __init__(self, age, name):
-        super().__init__(age, name)
+# class Animal:
+#     def __init__(self, age, name):
+#         self.age = age
+#         self.name = name
+#     def eat(self):
+#         print(f"{self.name} is eating")
+# class Dog(Animal) :
+#     def __init__(self, age, name):
+#         super().__init__(age, name)
 
-    def bark(self):
-        print(f"{self.name} is barking")
+#     def bark(self):
+#         print(f"{self.name} is barking")
 
-    def age1(self):
-        print(f"{self.name} is {self.age}")
-class Cat(Animal):
-    def __init__(self, age, name):
-        super().__init__(age, name)
+#     def age1(self):
+#         print(f"{self.name} is {self.age} years old")
+# class Cat(Animal):
+#     def __init__(self, age, name):
+#         super().__init__(age, name)
 
-    def sleep(self):
-        print(f"{self.name} is a sleeping cat")
+#     def sleep(self):
+#         print(f"{self.name} is a sleeping cat")
 
-    def age1(self):
-        print(f"{self.name} is {self.age}")
+#     def age1(self):
+#         print(f"{self.name} is {self.age} years old")
 
-dog1 = Dog(9, "Jake")
-dog1.bark()
-dog1.eat()
-dog1.age1()
-cat1 = Cat(10, "kiko")
-cat1.sleep()
-cat1.age1()
+# dog1 = Dog(9, "Jake")
+# dog1.bark()
+# dog1.eat()
+# dog1.age1()
+# cat1 = Cat(10, "kiko")
+# cat1.sleep()
+# cat1.age1()
+
+
+
+
+# class polygon:
+#     def display(self):
+#         print("This text is from polygon - display")
+
+#     def get_perimeter(self):
+#         perimeter = sum(self.sides)
+#         return perimeter
+
+#     def __init__(self, sides):
+#         self.sides=sides
+# class triangle(polygon):
+#     def display(self):
+#         print("This text is from triangle - display")
+#         super().display()
+
+
+# obj1 = triangle([4,5,6])
+# x = obj1.get_perimeter()
+# print("The perimeter value is : ", x)
+# obj1.display()
+
+import  sys
+
+class BankAccount:
+    def __init__(self, accountNumber, balance=0):
+        self.accountNumber = accountNumber
+        self.balance = balance
+
+    def start(self):
+        
+        while True:
+            user = input("Which service do you require? \nd - Deposit \nw - Withdraw\nb - Balance\nq - Quit\n\n")
+            if user == "d":
+                x = int(input("Deposit amount: "))
+                self.add(x)
+            elif user == "w":
+                x = int(input("Withdraw amount: "))
+                self.minus(x)
+            elif user == "b":
+                self.showBalance()
+            elif user == "q":
+                 sys.exit()
+            else:
+                print("Incorrect option \n")
+
+    def showBalance(self):
+        print(f"Your balance is: {self.balance}")
+
+    def add(self, deposit):
+        self.balance += deposit
+        print(f"Bank Account Number {self.accountNumber} has £{self.balance}")
+    
+    def minus(self, withdraw):
+        if withdraw > self.balance:
+            print(f"You don't have enough cash! \nYour balance is {self.balance}")
+        else:
+            self.balance -= withdraw
+            print(f"Bank Account Number {self.accountNumber} has £{self.balance}")
+
+x = int(input("Enter Account Number: "))
+deposit1 = BankAccount(x)
+# deposit1.add(10)
+deposit1.start()
+
+
+# deposit1 = BankAccount.add(10)
