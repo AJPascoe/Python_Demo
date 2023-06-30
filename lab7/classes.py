@@ -34,16 +34,26 @@ class Animal:
 class Dog(Animal) :
     def __init__(self, age, name):
         super().__init__(age, name)
+
     def bark(self):
         print(f"{self.name} is barking")
+
+    def age1(self):
+        print(f"{self.name} is {self.age}")
 class Cat(Animal):
     def __init__(self, age, name):
         super().__init__(age, name)
+
     def sleep(self):
         print(f"{self.name} is a sleeping cat")
+
+    def age1(self):
+        print(f"{self.name} is {self.age}")
 
 dog1 = Dog(9, "Jake")
 dog1.bark()
 dog1.eat()
+dog1.age1()
 cat1 = Cat(10, "kiko")
 cat1.sleep()
+cat1.age1()
