@@ -85,14 +85,14 @@
 import  sys
 
 class BankAccount:
-    def __init__(self, accountNumber, balance=0):
-        self.accountNumber = accountNumber
+    def __init__(self, pinNumber, balance=0):
+        self.pinNumber = pinNumber
         self.balance = balance
 
     def start(self):
         
         while True:
-            user = input("Which service do you require? \nd - Deposit \nw - Withdraw\nb - Balance\nq - Quit\n\n")
+            user = input("Which service do you require? \nd - Deposit \nw - Withdraw\nb - Balance\nc - Change Pin\nq - Quit\n\n")
             if user == "d":
                 x = int(input("Deposit amount: "))
                 self.add(x)
@@ -103,24 +103,32 @@ class BankAccount:
                 self.showBalance()
             elif user == "q":
                  sys.exit()
+            elif user == "c":
+                x = int(input("New Pin: "))
+                self.change(x)
             else:
                 print("Incorrect option \n")
+
+    def change(self, newPin):
+        self.pinNumber = newPin
+        print(f"Your new pin number is : {self.pinNumber}")
+        
 
     def showBalance(self):
         print(f"Your balance is: {self.balance}")
 
     def add(self, deposit):
         self.balance += deposit
-        print(f"Bank Account Number {self.accountNumber} has £{self.balance}")
+        print(f"Bank Account Number {self.pinNumber} has £{self.balance}")
     
     def minus(self, withdraw):
         if withdraw > self.balance:
             print(f"You don't have enough cash! \nYour balance is {self.balance}")
         else:
             self.balance -= withdraw
-            print(f"Bank Account Number {self.accountNumber} has £{self.balance}")
+            print(f"Bank Account Number {self.pinNumber} has £{self.balance}")
 
-x = int(input("Enter Account Number: "))
+x = int(input("Enter Pin Number: "))
 deposit1 = BankAccount(x)
 # deposit1.add(10)
 deposit1.start()
