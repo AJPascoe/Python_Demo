@@ -81,11 +81,11 @@ volks = sum(sales[1])
 merc = sum(sales[2])
 vaux = sum(sales[3])
 bmw = sum(sales[4])
-print(f"Ford Motor Company total yearly sales {ford}")
-print(f"Volkswagen UK total yearly sales {volks}")
-print(f"Mercedes-Benz UK total yearly sales {merc}")
-print(f"Vauxhall Motors total yearly sales {vaux}")
-print(f"BMW  total yearly sales {bmw}")
+print(f"Ford Motor Company total yearly sales: £{ford}")
+print(f"Volkswagen UK total yearly sales: £{volks}")
+print(f"Mercedes-Benz UK total yearly sales: £{merc}")
+print(f"Vauxhall Motors total yearly sales: £{vaux}")
+print(f"BMW  total yearly sales: £{bmw}")
 
 
 
